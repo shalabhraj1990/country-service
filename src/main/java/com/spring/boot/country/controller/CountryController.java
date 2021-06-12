@@ -3,6 +3,9 @@ package com.spring.boot.country.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,18 +22,18 @@ public class CountryController {
 	private CountryService countryService;
 
 	@GetMapping
-	public List<Country> getAllCountry() {
-		return countryService.getAllCountry();
+	public ResponseEntity<List<Country>> getAllCountry() {
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(countryService.getAllCountry());
 	}
 	
 	@GetMapping("/{country-code}")
-	public Country getCountryByCountryCode(@PathVariable("country-code") String countryCode) {
-		return countryService.getCountryByCountryCode(countryCode);
+	public ResponseEntity<Country> getCountryByCountryCode(@PathVariable("country-code") String countryCode) {
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(countryService.getCountryByCountryCode(countryCode));
 	}
 	
 	@GetMapping("/city/{city-name}")
-	public City getCityByName(@PathVariable("city-name") String cityName) {
-		return countryService.getCityByName(cityName);
+	public ResponseEntity<City> getCityByName(@PathVariable("city-name") String cityName) {
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(countryService.getCityByName(cityName));
 	}
 
 }
