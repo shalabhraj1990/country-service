@@ -5,13 +5,15 @@ import java.util.List;
 import com.spring.boot.country.controller.modal.City;
 import com.spring.boot.country.controller.modal.Country;
 
+import msk.spring.boot.common.dto.Response;
+
 public interface CountryService {
 	
 	
-	List<Country> getAllCountry();
+	Response<List<Country>> getAllCountry();
 
-	Country getCountryByCountryCode(String countryCode);
+	Response<Country> getCountryByCountryCode(String countryCode);
 
-	City getCityByName(String cityName);
+	Response<City> getCityByName(String cityName);
 
 }

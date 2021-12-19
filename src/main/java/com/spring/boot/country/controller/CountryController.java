@@ -15,6 +15,8 @@ import com.spring.boot.country.controller.modal.City;
 import com.spring.boot.country.controller.modal.Country;
 import com.spring.boot.country.service.CountryService;
 
+import msk.spring.boot.common.dto.Response;
+
 @RestController
 @RequestMapping("country")
 public class CountryController {
@@ -22,17 +24,17 @@ public class CountryController {
 	private CountryService countryService;
 
 	@GetMapping
-	public ResponseEntity<List<Country>> getAllCountry() {
+	public ResponseEntity<Response<List<Country>>> getAllCountry() {
 		return ResponseEntity.status(HttpStatus.ACCEPTED).body(countryService.getAllCountry());
 	}
 	
 	@GetMapping("/{country-code}")
-	public ResponseEntity<Country> getCountryByCountryCode(@PathVariable("country-code") String countryCode) {
+	public ResponseEntity<Response<Country>> getCountryByCountryCode(@PathVariable("country-code") String countryCode) {
 		return ResponseEntity.status(HttpStatus.ACCEPTED).body(countryService.getCountryByCountryCode(countryCode));
 	}
 	
 	@GetMapping("/city/{city-name}")
-	public ResponseEntity<City> getCityByName(@PathVariable("city-name") String cityName) {
+	public ResponseEntity<Response<City>> getCityByName(@PathVariable("city-name") String cityName) {
 		return ResponseEntity.status(HttpStatus.ACCEPTED).body(countryService.getCityByName(cityName));
 	}
 
