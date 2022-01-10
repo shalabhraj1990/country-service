@@ -18,7 +18,7 @@ import com.spring.boot.country.service.CountryService;
 import msk.spring.boot.common.dto.Response;
 
 @RestController
-@RequestMapping("country")
+@RequestMapping("countries")
 public class CountryController {
 	@Autowired
 	private CountryService countryService;
