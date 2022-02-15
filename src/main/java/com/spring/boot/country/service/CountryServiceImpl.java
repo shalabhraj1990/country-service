@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.spring.boot.country.controller.modal.City;
-import com.spring.boot.country.controller.modal.Country;
 import com.spring.boot.country.respository.CountryRepository;
 
 import msk.spring.boot.common.dto.Response;
+import msk.spring.boot.common.mobile.dto.City;
+import msk.spring.boot.common.mobile.dto.Country;
 
 @Service
 public class CountryServiceImpl implements CountryService {

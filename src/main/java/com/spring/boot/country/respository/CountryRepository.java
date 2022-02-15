@@ -9,8 +9,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.spring.boot.country.controller.modal.City;
-import com.spring.boot.country.controller.modal.Country;
+import msk.spring.boot.common.mobile.dto.City;
+import msk.spring.boot.common.mobile.dto.Country;
 
 @Repository
 public class CountryRepository {

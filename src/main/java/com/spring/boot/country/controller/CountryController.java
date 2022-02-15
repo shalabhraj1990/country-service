@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.boot.country.annotations.LogExecutionTime;
-import com.spring.boot.country.controller.modal.City;
-import com.spring.boot.country.controller.modal.Country;
 import com.spring.boot.country.service.CountryService;
 
 import msk.spring.boot.common.dto.Response;
+import msk.spring.boot.common.mobile.dto.City;
+import msk.spring.boot.common.mobile.dto.Country;
 
 @RestController
 @RequestMapping("countries")

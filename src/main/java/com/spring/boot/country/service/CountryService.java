@@ -2,10 +2,9 @@ package com.spring.boot.country.service;
 
 import java.util.List;
 
-import com.spring.boot.country.controller.modal.City;
-import com.spring.boot.country.controller.modal.Country;
-
 import msk.spring.boot.common.dto.Response;
+import msk.spring.boot.common.mobile.dto.City;
+import msk.spring.boot.common.mobile.dto.Country;
 
 public interface CountryService {
 	
