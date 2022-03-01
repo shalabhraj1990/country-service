@@ -1,4 +1,4 @@
-package com.spring.boot.config;
+package com.spring.boot.country.config;
 
 import javax.servlet.Filter;
 
